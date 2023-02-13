@@ -15,9 +15,8 @@ Balanced means either:
 - If the weights are a `Matrix` for each dimension of each 3D point, the sum of coordinate-wise
   weights is equalised.
 
-The resulting `RCB` tree stores each domain's neighbours in the `x`, `y` and `z` members, each
-domain's span in the `xspan`, `yspan` and `zspan` members, and the spatial limits of the points
-used to construct it in the `xlimit`, `ylimit` and `zlimit` members.
+The resulting `RCB` tree stores each domain's neighbours, each domain's span, and the spatial limits of the points
+used to construct it.
 
 The input `points` should have shape `(3, NumPoints)`. When computing the neighbours, an optional
 "skin" distance may be specified, such that if any domains are less than "skin" apart (even if they
@@ -61,7 +60,7 @@ rcbplot(rcb, points)
 rcbplot(rcb, points, weights)
 ```
 
-Interactive plots showing optimisation iterations can be shown with `GLMakie`:
+Interactive plots depicting each optimisation iteration can be shown with `GLMakie`:
 
 ```julia
 using GLMakie
@@ -70,7 +69,13 @@ interactive_rcbplot(points, weights)
 ```
 
 
+## References
+
+While this implementation is original - including its weighted point formulation and domain
+optimisations - and does not follow any other code, we build upon the ideas of:
+
+    Berger, M.J. and Bokhari, S.H., 1987. A partitioning strategy for nonuniform problems on multiprocessors. IEEE Transactions on Computers, 36(05), pp.570-580.
+
+
 ## License
 CoordinateBisection.jl is GPL v3.0 licensed.
-
-
