@@ -71,11 +71,12 @@ interactive_rcbplot(points, weights)
 
 ## References
 
-While this implementation is original - including its weighted point formulation and domain
+While this implementation is original - including original weighted point formulation and domain
 optimisations - and does not follow any other code, we build upon the ideas of:
 
-    Berger, M.J. and Bokhari, S.H., 1987. A partitioning strategy for nonuniform problems on multiprocessors. IEEE Transactions on Computers, 36(05), pp.570-580.
+> [1] Berger, M.J. and Bokhari, S.H., 1987. A partitioning strategy for nonuniform problems on multiprocessors. IEEE Transactions on Computers, 36(05), pp.570-580.
 
 
 ## License
-CoordinateBisection.jl is GPL v3.0 licensed.
+
+`CoordinateBisection.jl` is GPL v3.0 licensed.
