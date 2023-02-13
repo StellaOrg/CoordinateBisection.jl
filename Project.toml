@@ -1,0 +1,21 @@
+name = "CoordinateBisection"
+uuid = "fbbb2451-6dde-4807-9c10-ea24ace8c95b"
+authors = ["Andrei-Leonard Nicusan <a.l.nicusan@gmail.com> and contributors"]
+version = "0.1.0"
+
+[deps]
+DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+Requires = "ae029012-a4dd-5104-9daa-d747884805df"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+
+[compat]
+DocStringExtensions = "0.9"
+StaticArrays = "1.5"
+julia = "1.0"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+
+[targets]
+test = ["Test", "Random"]
