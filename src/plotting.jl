@@ -37,12 +37,12 @@ function side_colors(rp, i)
     rcb = rp[1][]
     colors = Vector{Any}(undef, 6)
 
-    colors[1] = isinf(rcb.zspan[i][1]) ? rp.outer : rp.inner
-    colors[2] = isinf(rcb.yspan[i][1]) ? rp.outer : rp.inner
-    colors[3] = isinf(rcb.xspan[i][2]) ? rp.outer : rp.inner
-    colors[4] = isinf(rcb.yspan[i][2]) ? rp.outer : rp.inner
-    colors[5] = isinf(rcb.xspan[i][1]) ? rp.outer : rp.inner
-    colors[6] = isinf(rcb.zspan[i][2]) ? rp.outer : rp.inner
+    colors[1] = isinf(rcb.zspan[i][1]) ? rp.outer[] : rp.inner[]
+    colors[2] = isinf(rcb.yspan[i][1]) ? rp.outer[] : rp.inner[]
+    colors[3] = isinf(rcb.xspan[i][2]) ? rp.outer[] : rp.inner[]
+    colors[4] = isinf(rcb.yspan[i][2]) ? rp.outer[] : rp.inner[]
+    colors[5] = isinf(rcb.xspan[i][1]) ? rp.outer[] : rp.inner[]
+    colors[6] = isinf(rcb.zspan[i][2]) ? rp.outer[] : rp.inner[]
 
     colors
 end
@@ -111,7 +111,7 @@ function plot(rp, rcb, points, weights)
             mesh!(rp,
                   @view(corners[@view(faces[j, :]), :]),
                   [1 2 3; 3 4 1],
-                  color = (colors[j], rp.alpha),
+                  color = (colors[j], rp.alpha[]),
                   transparency = true)
         end
     end
